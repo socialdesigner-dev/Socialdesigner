@@ -1,2 +1,2 @@
-# Socialdesigner
-Teste de site social designer
+# Designer social
+Versão para GitHub pelo celular: todos os arquivos ficam na raiz.
