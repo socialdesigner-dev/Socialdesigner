@@ -1,7 +1,42 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Design Premium</title><link rel="stylesheet" href="/style.css"></head><body>
-<header><b>STUDIO • DESIGN</b><a href="#planos">PLANOS</a></header>
-<main><section class="hero"><div><small>DESIGN PARA STORIES & FEED</small><h1>Faça sua empresa <em>parecer mais profissional.</em></h1><p>Peças criadas para destacar ofertas, produtos e serviços com uma apresentação comercial mais forte.</p><a class="btn" href="#planos">VER PLANOS</a></div><img src="/portfolio-premium.png"></section>
-<section><small>ESTRATÉGIA</small><h2>Cada publicação pode ter uma função.</h2><div class="week"><b>SEG<br><span>Apresentar</span></b><b>TER<br><span>Ofertar</span></b><b>QUA<br><span>Confiança</span></b><b>QUI<br><span>Desejo</span></b><b>SEX<br><span>Converter</span></b><b>SÁB<br><span>Urgência</span></b><b>DOM<br><span>Relacionar</span></b></div></section>
-<section id="planos"><small>PLANOS</small><h2>Escolha seu pacote.</h2><div class="plans"><article><h3>2 designs</h3><strong>R$ 30</strong><p>1 Feed + 1 Story</p><button onclick="buy('start')">COMPRAR</button></article><article class="hot"><h3>6 designs</h3><strong>R$ 60</strong><p>Mais volume</p><button onclick="buy('pro')">QUERO ESTE</button></article><article><h3>10 designs</h3><strong>R$ 100</strong><p>Mais presença</p><button onclick="buy('presence')">COMPRAR</button></article></div></section></main>
-<div id="modal" class="modal" hidden><div class="box"><button class="x" onclick="modal.hidden=true">×</button><small>PAGAMENTO PIX</small><h2 id="pn"></h2><p>Chave Pix:</p><code id="pix">d8bd8cb1-ddcb-464c-a373-c3d8e263f876</code><button onclick="navigator.clipboard.writeText(pix.textContent);alert('Chave copiada!')">COPIAR PIX</button><p class="muted">A liberação automática do contato dependerá da integração do webhook do provedor Pix.</p><a class="btn" href="/contato">ACESSAR CONTATO</a></div></div>
-<script>async function buy(p){let r=await fetch('/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({plan:p})});let d=await r.json();pn.textContent=d.plan.name+' — R$ '+d.plan.price;modal.hidden=false}</script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alpha Design — Presença que vende</title>
+<meta name="description" content="Design premium para Instagram de empresas: posts e stories personalizados, rápidos e com preço justo.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div><div class="glow g1"></div><div class="glow g2"></div>
+<header><div class="brand"><span class="mark">A</span><span>ALPHA <b>DESIGN</b></span></div><div class="counter"><span id="current">01</span><i></i><span>04</span></div></header>
+<main id="deck">
+<section class="screen active" data-step="1">
+ <div class="eyebrow reveal">DESIGN • ESTRATÉGIA • PRESENÇA</div>
+ <h1 class="reveal delay1">Bem-vindo à<br><em>Alpha Design.</em></h1>
+ <p class="lead reveal delay2">Sua empresa pode parecer tão profissional quanto as maiores — sem pagar preço de agência.</p>
+ <div class="reveal delay3"><button class="next">PRÓXIMO <span>→</span></button></div>
+ <div class="orb"></div>
+</section>
+<section class="screen" data-step="2">
+ <div class="split">
+  <div><div class="eyebrow reveal">VALOR INTELIGENTE</div><h2 class="reveal delay1">Premium no visual.<br><em>Justo no preço.</em></h2><p class="copy reveal delay2">Enquanto serviços de design podem cobrar valores muito maiores por peça, nossa proposta é simples: entregar artes personalizadas, modernas e pensadas para o seu negócio por um preço acessível.</p><p class="quote reveal delay3">“Design profissional não precisa custar como uma agência.”</p></div>
+  <div class="compare reveal delay2"><div class="price muted"><small>OUTROS SERVIÇOS</small><strong>R$100–300</strong><span>por arte*</span></div><div class="vs">VS</div><div class="price gold"><small>ALPHA DESIGN</small><strong>A partir de R$15</strong><span>por arte nos pacotes</span></div><p class="fine">*Faixa ilustrativa da proposta apresentada. Valores de terceiros variam.</p></div>
+ </div>
+ <button class="next bottom">VER O QUE ENTREGAMOS <span>→</span></button>
+</section>
+<section class="screen" data-step="3">
+ <div class="eyebrow reveal">TRABALHOS QUE FALAM POR SI</div><h2 class="reveal delay1">Seu Instagram é sua <em>vitrine.</em></h2><p class="copy narrow reveal delay2">Posts e stories consistentes ajudam sua marca a transmitir cuidado, clareza e profissionalismo. Veja três estilos que podemos criar para negócios diferentes.</p>
+ <div class="gallery reveal delay3"><figure><img src="assets/supermercado.png" alt="Exemplo de design para supermercado"><figcaption>SUPERMERCADO <span>Feed</span></figcaption></figure><figure><img src="assets/restaurante.png" alt="Exemplo de design para restaurante"><figcaption>RESTAURANTE <span>Feed</span></figcaption></figure><figure><img src="assets/pizzaria.png" alt="Exemplo de design para pizzaria"><figcaption>PIZZARIA <span>Feed</span></figcaption></figure></div>
+ <button class="next bottom">QUERO ELEVAR MINHA MARCA <span>→</span></button>
+</section>
+<section class="screen" data-step="4">
+ <div class="finalwrap"><div class="eyebrow reveal">A PRÓXIMA IMPRESSÃO COMEÇA AGORA</div><h2 class="reveal delay1">Faça sua empresa<br><em>parecer inesquecível.</em></h2><p class="lead reveal delay2">Uma presença visual forte pode chamar mais atenção e tornar sua comunicação mais profissional. Nós cuidamos do design para você focar no seu negócio.</p>
+ <div class="chips reveal delay3"><span>✦ Design personalizado</span><span>✦ Entrega rápida</span><span>✦ Preço acessível</span><span>✦ Posts + Stories</span></div>
+ <div class="contact reveal delay3"><small>CONTATO ABAIXO</small><button id="showContact">EXIBIR CONTATO</button><div id="contactBox" class="contactBox"><strong>(24) 99983-1276</strong><a href="https://wa.me/5524999831276?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Alpha%20Design%20e%20quero%20saber%20mais." target="_blank" rel="noopener">ABRIR WHATSAPP →</a></div></div></div>
+ <button id="restart" class="ghost">↻ VER NOVAMENTE</button>
+</section>
+</main>
+<script src="script.js"></script>
+</body></html>
