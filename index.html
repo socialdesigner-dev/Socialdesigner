@@ -1,42 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Alpha Design — Presença que vende</title>
-<meta name="description" content="Design premium para Instagram de empresas: posts e stories personalizados, rápidos e com preço justo.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11100E">
+<meta name="description" content="Alpha Designers — Design, Social Media e Vídeos Publicitários com IA.">
+<title>Alpha Designers | Portfólio</title>
+<style>
+:root{--bg:#11100E;--card:#1E1B18;--card2:#26211D;--gold:#C79652;--gold2:#E4BC7D;--cream:#F4EFE7;--muted:#B8AFA4;--line:rgba(199,150,82,.24)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 0 0,rgba(199,150,82,.09),transparent 28%),var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}img,video{display:block;max-width:100%}.wrap{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(17,16,14,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.05)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:15px 0}.brand{font-weight:900;letter-spacing:.14em}.brand span{color:var(--gold)}.navlinks{display:flex;gap:18px;color:var(--muted);font-size:.92rem}
+.hero{padding:80px 0 64px}.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.eyebrow{color:var(--gold);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+h1,h2{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.03em}h1{font-size:clamp(3rem,8vw,6rem);line-height:.95;margin:.15em 0 .25em}h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1.04;margin:.15em 0}
+p{color:var(--muted)}.hero p{font-size:1.1rem;max-width:680px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;justify-content:center;align-items:center;padding:14px 20px;border-radius:999px;font-weight:800;border:1px solid var(--gold)}.primary{background:var(--gold);color:#18130e}
+.panel,.card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:24px}.panel{padding:22px}.metric{padding:18px;border-radius:18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05);margin-top:12px}.metric b{display:block;color:var(--gold2);font-size:1.25rem}
+section{padding:76px 0}.sectionHead{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:28px}.sectionHead p{max-width:560px;margin:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:22px}.card h3{margin:.2em 0 .45em}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.work{overflow:hidden;padding:0}.work img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top}.cap{padding:14px 16px;color:var(--muted)}
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.videoCard{overflow:hidden;padding:0}.videoCard video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000}.videoMeta{padding:15px}.videoMeta h3{margin:0 0 4px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}.compare ul,.price ul{color:var(--muted);padding-left:20px}
+.pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.price{position:relative}.price strong{font-size:2rem;display:block;margin:8px 0}.badge{position:absolute;right:14px;top:14px;color:var(--gold2);font-size:.75rem;border:1px solid var(--line);padding:5px 8px;border-radius:999px}
+.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.stars{color:var(--gold2);letter-spacing:.08em}.score{float:right;color:var(--gold2);font-weight:800}.note{padding:14px 16px;border-left:3px solid var(--gold);background:rgba(199,150,82,.07);border-radius:10px;margin-top:14px;color:var(--muted)}
+.cta{padding:30px;border:1px solid var(--gold);border-radius:28px;background:linear-gradient(135deg,rgba(199,150,82,.12),rgba(255,255,255,.02)),var(--card)}
+footer{padding:34px 0 48px;color:#7f776f;font-size:.9rem}
+@media(max-width:900px){.heroGrid,.compare{grid-template-columns:1fr}.videos,.grid3{grid-template-columns:1fr}.pricing{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}}
+@media(max-width:600px){section{padding:60px 0}.pricing,.gallery,.reviews{grid-template-columns:1fr}.sectionHead{display:block}.actions .btn{width:100%}}
+</style>
 </head>
 <body>
-<div class="grain"></div><div class="glow g1"></div><div class="glow g2"></div>
-<header><div class="brand"><span class="mark">A</span><span>ALPHA <b>DESIGN</b></span></div><div class="counter"><span id="current">01</span><i></i><span>04</span></div></header>
-<main id="deck">
-<section class="screen active" data-step="1">
- <div class="eyebrow reveal">DESIGN • ESTRATÉGIA • PRESENÇA</div>
- <h1 class="reveal delay1">Bem-vindo à<br><em>Alpha Design.</em></h1>
- <p class="lead reveal delay2">Sua empresa pode parecer tão profissional quanto as maiores — sem pagar preço de agência.</p>
- <div class="reveal delay3"><button class="next">PRÓXIMO <span>→</span></button></div>
- <div class="orb"></div>
-</section>
-<section class="screen" data-step="2">
- <div class="split">
-  <div><div class="eyebrow reveal">VALOR INTELIGENTE</div><h2 class="reveal delay1">Premium no visual.<br><em>Justo no preço.</em></h2><p class="copy reveal delay2">Enquanto serviços de design podem cobrar valores muito maiores por peça, nossa proposta é simples: entregar artes personalizadas, modernas e pensadas para o seu negócio por um preço acessível.</p><p class="quote reveal delay3">“Design profissional não precisa custar como uma agência.”</p></div>
-  <div class="compare reveal delay2"><div class="price muted"><small>OUTROS SERVIÇOS</small><strong>R$100–300</strong><span>por arte*</span></div><div class="vs">VS</div><div class="price gold"><small>ALPHA DESIGN</small><strong>A partir de R$15</strong><span>por arte nos pacotes</span></div><p class="fine">*Faixa ilustrativa da proposta apresentada. Valores de terceiros variam.</p></div>
- </div>
- <button class="next bottom">VER O QUE ENTREGAMOS <span>→</span></button>
-</section>
-<section class="screen" data-step="3">
- <div class="eyebrow reveal">TRABALHOS QUE FALAM POR SI</div><h2 class="reveal delay1">Seu Instagram é sua <em>vitrine.</em></h2><p class="copy narrow reveal delay2">Posts e stories consistentes ajudam sua marca a transmitir cuidado, clareza e profissionalismo. Veja três estilos que podemos criar para negócios diferentes.</p>
- <div class="gallery reveal delay3"><figure><img src="assets/supermercado.png" alt="Exemplo de design para supermercado"><figcaption>SUPERMERCADO <span>Feed</span></figcaption></figure><figure><img src="assets/restaurante.png" alt="Exemplo de design para restaurante"><figcaption>RESTAURANTE <span>Feed</span></figcaption></figure><figure><img src="assets/pizzaria.png" alt="Exemplo de design para pizzaria"><figcaption>PIZZARIA <span>Feed</span></figcaption></figure></div>
- <button class="next bottom">QUERO ELEVAR MINHA MARCA <span>→</span></button>
-</section>
-<section class="screen" data-step="4">
- <div class="finalwrap"><div class="eyebrow reveal">A PRÓXIMA IMPRESSÃO COMEÇA AGORA</div><h2 class="reveal delay1">Faça sua empresa<br><em>parecer inesquecível.</em></h2><p class="lead reveal delay2">Uma presença visual forte pode chamar mais atenção e tornar sua comunicação mais profissional. Nós cuidamos do design para você focar no seu negócio.</p>
- <div class="chips reveal delay3"><span>✦ Design personalizado</span><span>✦ Entrega rápida</span><span>✦ Preço acessível</span><span>✦ Posts + Stories</span></div>
- <div class="contact reveal delay3"><small>CONTATO ABAIXO</small><button id="showContact">EXIBIR CONTATO</button><div id="contactBox" class="contactBox"><strong>(24) 99983-1276</strong><a href="https://wa.me/5524999831276?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Alpha%20Design%20e%20quero%20saber%20mais." target="_blank" rel="noopener">ABRIR WHATSAPP →</a></div></div></div>
- <button id="restart" class="ghost">↻ VER NOVAMENTE</button>
-</section>
-</main>
-<script src="script.js"></script>
+<nav><div class="wrap nav"><div class="brand">ALPHA <span>DESIGNERS</span></div><div class="navlinks"><a href="#portfolio">Portfólio</a><a href="#videos">Vídeos</a><a href="#precos">Preços</a><a href="#contato">Contato</a></div></div></nav>
+
+<header class="hero"><div class="wrap heroGrid">
+<div><div class="eyebrow">Design • Social Media • Vídeos com IA</div><h1>Seu negócio merece uma imagem à altura do que entrega.</h1><p>Não entregamos apenas uma arte. Criamos presença com designs, vídeos publicitários, cronogramas e planos mensais para manter sua marca ativa.</p><div class="actions"><a class="btn primary" href="#portfolio">Ver trabalhos</a><a class="btn" href="#precos">Ver planos</a></div></div>
+<div class="panel"><div class="eyebrow">O que você recebe</div><div class="metric"><b>Designs</b>Feed, stories, campanhas e ofertas.</div><div class="metric"><b>Vídeos 9:16</b>Reels, TikTok, Stories e anúncios.</div><div class="metric"><b>Consistência</b>Pacotes e produção durante o mês inteiro.</div></div>
+</div></header>
+
+<section><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">01 — Percepção</div><h2>Antes da conversa, vem a imagem.</h2></div><p>Uma comunicação visual forte ajuda a transmitir cuidado, confiança e valor antes mesmo do primeiro contato.</p></div>
+<div class="grid3"><div class="card"><h3>Clareza</h3><p>Informação organizada e fácil de entender.</p></div><div class="card"><h3>Consistência</h3><p>Um padrão visual que fortalece a marca.</p></div><div class="card"><h3>Percepção de valor</h3><p>Apresentação profissional para valorizar o produto.</p></div></div></div></section>
+
+<section id="portfolio"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">02 — Portfólio</div><h2>Trabalhos selecionados.</h2></div><p>Do minimalismo ao alto impacto, adaptamos a linguagem ao segmento.</p></div>
+<div class="gallery">
+<div class="card work"><img src="assets/portfolio-3.png" alt="Design de restaurante"><div class="cap"><b>Restaurante</b> — impacto premium</div></div>
+<div class="card work"><img src="assets/portfolio-4.png" alt="Design de pizzaria"><div class="cap"><b>Pizzaria</b> — alto impacto</div></div>
+<div class="card work"><img src="assets/portfolio-5.png" alt="Design automotivo"><div class="cap"><b>Automotivo</b> — luxo e autoridade</div></div>
+<div class="card work"><img src="assets/portfolio-6.png" alt="Comparativo visual"><div class="cap"><b>Campanhas</b> — apresentação profissional</div></div>
+</div></div></section>
+
+<section id="videos"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">03 — Vídeos publicitários com IA</div><h2>Seu produto também pode se mover.</h2></div><p>Os vídeos ficam no próprio site: o cliente aperta play e assiste sem abrir Drive.</p></div>
+<div class="videos">
+<div class="card videoCard"><video controls playsinline preload="metadata" poster="assets/poster-restaurante.jpg"><source src="assets/alpha-restaurante.mp4" type="video/mp4"></video><div class="videoMeta"><h3>Alpha Restaurante</h3><p>Food commercial • premium • 9:16</p></div></div>
+<div class="card videoCard"><video controls playsinline preload="metadata" poster="assets/poster-store.jpg"><source src="assets/nova-store.mp4" type="video/mp4"></video><div class="videoMeta"><h3>Nova Store</h3><p>Comercial • dinâmico • 9:16</p></div></div>
+<div class="card videoCard"><video controls playsinline preload="metadata" poster="assets/poster-pizza.jpg"><source src="assets/forno-77.mp4" type="video/mp4"></video><div class="videoMeta"><h3>Forno 77</h3><p>Food commercial • impacto • 9:16</p></div></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">04 — Por que Alpha</div><h2>Mais que uma arte bonita.</h2></div><p>Uma peça isolada resolve um post. Uma parceria completa resolve a presença da marca.</p></div>
+<div class="compare">
+<div class="card"><div class="eyebrow">Serviço básico</div><h3>Uma entrega. Um formato.</h3><ul><li>Peça avulsa</li><li>Sem rotina de conteúdo</li><li>Sem integração entre design e vídeo</li></ul></div>
+<div class="card"><div class="eyebrow">Alpha Designers</div><h3>Uma presença mais completa.</h3><ul><li><b>Designs + vídeos publicitários</b></li><li><b>Cronograma nos pacotes aplicáveis</b></li><li><b>Planos mensais</b></li><li><b>Ajustes de vídeo incluídos</b></li></ul></div>
+</div></div></section>
+
+<section id="precos"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">05 — Design</div><h2>Planos de design.</h2></div><p>Uma arte, pacote de entrada ou produção mensal.</p></div>
+<div class="pricing">
+<div class="card price"><h3>Arte avulsa</h3><strong>R$ 20</strong><p>Primeira compra: R$ 15 por arte.</p></div>
+<div class="card price"><span class="badge">Entrada</span><h3>20 artes</h3><strong>R$ 300</strong><p>Inclui cronograma de postagem.</p></div>
+<div class="card price"><h3>Plano mensal</h3><strong>R$ 1.200</strong><p>Primeira compra • 2 artes por dia durante 30 dias.</p></div>
+<div class="card price"><h3>Valor original</h3><strong>R$ 2.100</strong><p>Preço do plano mensal fora da condição de entrada.</p></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">06 — Vídeos</div><h2>Planos de vídeos com IA.</h2></div><p>Direito a ajustes solicitados no vídeo sem cobrança separada pela edição.</p></div>
+<div class="pricing">
+<div class="card price"><h3>1 vídeo</h3><strong>R$ 15</strong><p>Ideal para testar um criativo.</p></div>
+<div class="card price"><span class="badge">10% OFF</span><h3>10 vídeos</h3><strong>R$ 135</strong><p>Economia de R$ 15.</p></div>
+<div class="card price"><span class="badge">20% OFF</span><h3>50 vídeos</h3><strong>R$ 600</strong><p>Economia de R$ 150.</p></div>
+<div class="card price"><h3>Plano mensal</h3><strong>2/dia</strong><p>Até 60 vídeos em 30 dias. Valor definido conforme a campanha.</p></div>
+</div><div class="note">Edições solicitadas estão incluídas para aproximar o resultado do que foi combinado, sem taxa separada de edição.</div></div></section>
+
+<section><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">07 — Demonstração de experiência do cliente</div><h2>O padrão que buscamos entregar.</h2></div><p>Exemplos de experiência que orientam atendimento, revisão e entrega.</p></div>
+<div class="reviews">
+<div class="card"><span class="score">5,0 / 5</span><h3>Nova Store</h3><div class="stars">★★★★★</div><p>Entrega rápida e visual muito acima do esperado. Os ajustes foram feitos sem complicação.</p></div>
+<div class="card"><span class="score">4,5 / 5</span><h3>Forno 77</h3><div class="stars">★★★★½</div><p>Gostamos da liberdade para pedir alterações até o vídeo ficar mais alinhado à campanha.</p></div>
+<div class="card"><span class="score">4,7 / 5</span><h3>Alpha Restaurante</h3><div class="stars">★★★★¾</div><p>Boa velocidade, acabamento premium e comunicação simples durante as revisões.</p></div>
+<div class="card"><span class="score">5,0 / 5</span><h3>Lumina Home</h3><div class="stars">★★★★★</div><p>O processo ficou organizado e o material chegou pronto para publicar.</p></div>
+</div></div></section>
+
+<section id="contato"><div class="wrap"><div class="cta"><div class="eyebrow">Alpha Designers</div><h2>A próxima marca que podemos transformar é a sua.</h2><p>Comece com uma peça, um pacote ou um mês inteiro de produção.</p><div class="actions"><a class="btn primary" href="https://socialdesigner-premium.onrender.com" target="_blank" rel="noopener">Entrar em contato</a></div></div></div></section>
+
+<footer><div class="wrap">© Alpha Designers • Portfólio comercial</div></footer>
 </body></html>
